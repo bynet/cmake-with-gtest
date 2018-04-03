@@ -8,7 +8,7 @@ TEST(ProjectTest, FirstTest) {
 }
 
 TEST(TestCaseName, TestName) {
-    EXPECT_EQ(1, 0);
+    EXPECT_EQ(1, 1);
     EXPECT_TRUE(true);
 }
 
@@ -27,6 +27,7 @@ TEST(tut_DeathTest, simpletest) {
         //Reasons of death 
         // 1.Program exited with non-zero code
         // 2.Program was killed by a signal
+	EXPECT_EXIT(function1(), ::testing::ExitedWithCode(1) , "");
 
 }
 
